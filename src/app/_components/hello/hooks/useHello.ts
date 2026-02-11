@@ -1,5 +1,4 @@
 // hooks/useHello.ts
-const BASE_PATH = '/b2b-digital-marketing-agency';
 
 const useHello = (slug?: string) => {
   const isB2BPage = slug === 'b2b-digital-marketing';   
