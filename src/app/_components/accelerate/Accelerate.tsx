@@ -87,15 +87,6 @@ const payload = {
           })}
         </h1>
         <p className="text-[#94A3B8] md:text-[16px] text-[14px] leading-[22px] md:leading-7 font-semibold mb-6 font-jakarta">{description}</p>
-{/* <ul className="space-y-2 mb-10 text-[#94A3B8] text-sm ml-10">
-  {descriptionBullets.map((item, idx) => (
-    <li key={idx} className="flex gap-2">
-      <span>-</span>
-      <span>{item}</span>
-    </li>
-  ))}
-</ul> */}
-
         <ul className="space-y-2 mb-8 ">
           {bullets.map((point, idx) => (
             <li key={idx} className="flex items-center gap-2 " >
