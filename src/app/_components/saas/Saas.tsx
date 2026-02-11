@@ -32,7 +32,7 @@ export default function Saas() {
         {pillars.map((pillar, idx) => (
           <div key={idx} className="flex flex-col items-start text-left rounded-md p-5 ">
             <Image width={24} height={32}
-              src={`${BASE_PATH}${pillar.icon}`}
+              src={pillar.icon}
               alt={pillar.title}
               className="w-7 h-7 mb-3"
             />

@@ -1,4 +1,6 @@
 // hooks/useFounders.ts
+
+const BASE_PATH = '/b2b-digital-marketing-agency';
 const useFounders = () => {
   return {
     heading: 'What B2B |Leaders Say',
@@ -10,14 +12,14 @@ const useFounders = () => {
         authorName: 'Gautham Nagaraj',
         authorRole: 'Head of Marketing',
         authorAvatar: '/gautham.png',
-        companyLogo: '/assets/images/dem.svg',
+        companyLogo: `${BASE_PATH}/assets/images/dem.svg`,
       },
       {
         message: `Shitanshu is a highly skilled Performance Marketer. During our time together at Outplay, Shitanshu consistently delivered impressive results, thanks to his deep understanding of data analysis, ad creative, and audience targeting. I was particularly impressed with Shitanshu's ability to deliver on lead requirements from paid campaigns while keeping costs low. `,
         authorName: 'Sandeep John',
         authorRole: 'Marketing Director',
         authorAvatar: '/john.png',
-        companyLogo: '/assets/images/logos/sprinto.svg',
+        companyLogo: `${BASE_PATH}/assets/images/logos/sprinto.svg`,
       },
     ],
   }

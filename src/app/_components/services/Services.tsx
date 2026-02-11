@@ -1,7 +1,6 @@
 'use client'
 
 import useServices from './hooks/useServices'
-const BASE_PATH = '/b2b-digital-marketing-agency';
 export default function Services() {
   const { heading, services } = useServices()
 
@@ -43,7 +42,7 @@ export default function Services() {
                     className="bg-white px-3 py-1 rounded shadow-sm flex items-center"
                   >
                     <img
-                      src={`${BASE_PATH}${tool.logo}`}
+                      src={tool.logo}
                       alt={tool.name}
                       className="object-contain"
                       width={92}

@@ -38,7 +38,7 @@ export default function Saas() {
           >
             {/* ✅ Safe Next Image */}
             <Image
-              src={`${BASE_PATH}${pillar.icon}`}
+              src={pillar.icon}
               alt={pillar.title}
               width={28}
               height={28}
