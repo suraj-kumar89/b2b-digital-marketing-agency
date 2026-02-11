@@ -35,7 +35,7 @@ export default function Services() {
                 {service.description}
               </p>
 
-              <div className="flex gap-3 mt-auto flex-wrap">
+              <div className="flex gap-3 mt-auto ">
                 {service.tools.map((tool) => (
                   <div
                     key={tool.name}
