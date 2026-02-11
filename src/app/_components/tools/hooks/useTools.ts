@@ -24,7 +24,7 @@ const useTools = () => {
        `${BASE_PATH}/assets/images/logos/meta.svg`,
         `${BASE_PATH}/assets/images/logos/web.svg`,
         `${BASE_PATH}/assets/images/logos/ads.svg`,
-        `${BASE_PATH}/assets/images/logos/ana.svg1`,
+        `${BASE_PATH}/assets/images/logos/ana.svg`,
         `${BASE_PATH}/assets/images/logos/bing.svg`,
         `${BASE_PATH}/assets/images/logos/cap.svg`,
         `${BASE_PATH}/assets/images/logos/hotjar.svg`,

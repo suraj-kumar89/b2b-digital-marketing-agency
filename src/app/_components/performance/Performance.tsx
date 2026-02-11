@@ -2,6 +2,7 @@
 
 import usePerformance from './hooks/usePerformance'
 import Image from 'next/image'
+const BASE_PATH = '/b2b-digital-marketing-agency';
 
 export default function Performance() {
   const { title, subtitle, pillars } = usePerformance()
@@ -26,7 +27,7 @@ export default function Performance() {
           >
             {/* ICON */}
             <Image
-              src={pillar.icon}
+              src={`${BASE_PATH}${pillar.icon}`}
               alt={pillar.title}
               width={48}
               height={48}

@@ -1,5 +1,7 @@
 // hooks/useSaas.ts
 
+
+const BASE_PATH = '/b2b-digital-marketing-agency';
 const useSaas = () => {
   return {
     heading: 'Why SaaS Companies |Partner with Me',
@@ -11,21 +13,21 @@ const useSaas = () => {
     },
     pillars: [
       {
-        icon: '/assets/Svg/award.svg',
+        icon: `${BASE_PATH}/assets/Svg/award.svg`,
         title: 'Dedicated SaaS Expertise',
         color: 'text-yellow-400',
         description:
           'Specialised team with focused expertise in key SaaS growth metrics |like CAC, pipeline velocity, ARR, and MQL–to–SQL conversions.',
       },
       {
-        icon: '/assets/Svg//coins.svg',
+        icon: `${BASE_PATH}/assets/Svg//coins.svg`,
         title: 'Transparency and Accountability',
         color: 'text-sky-400',
         description:
           'Detailed reporting and consistent communication to maintain clarity, |trust, and alignment with your business objectives.',
       },
       {
-        icon: '/assets/Svg/graph.svg',
+        icon: `${BASE_PATH}/assets/Svg/graph.svg`,
         title: 'Proven, Impactful Results',
         color: 'text-emerald-400',
         description:

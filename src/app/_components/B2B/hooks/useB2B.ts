@@ -1,3 +1,5 @@
+const BASE_PATH = '/b2b-digital-marketing-agency';
+
 const useSaas = () => {
   return {
     heading: 'Why B2B Companies Partner With Me',
@@ -9,21 +11,21 @@ const useSaas = () => {
     },
     pillars: [
       {
-        icon: '/assets/svg/award.svg',
+        icon: `${BASE_PATH}/assets/svg/award.svg`,
         title: 'Dedicated B2B Expertise',
         color: 'text-yellow-400',
         description:
           'Deep experience working with B2B businesses that operate with longer sales cycles, multiple decision makers, and high-value deals.\n\nEvery strategy is built around real B2B growth metrics such as lead quality, pipeline contribution, conversion efficiency, and sales alignment.',
       },
       {
-        icon: '/assets/svg/coins.svg', // ✅ fixed
+        icon: `${BASE_PATH}/assets/svg/coins.svg`, // ✅ fixed
         title: 'Transparency and Accountability',
         color: 'text-sky-400',
         description:
           'Clear reporting, consistent communication, and full visibility into what is working and what is not.\n\nYou always know where budget is being spent, what impact it is driving, and how decisions are being made in alignment with your business objectives.',
       },
       {
-        icon: '/assets/svg/graph.svg',
+        icon: `${BASE_PATH}/assets/svg/graph.svg`,
         title: 'Proven, Impactful Results',
         color: 'text-emerald-400',
         description:
