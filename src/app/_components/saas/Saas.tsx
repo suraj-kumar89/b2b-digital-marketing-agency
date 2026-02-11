@@ -3,7 +3,7 @@
 import { FaArrowRightLong } from 'react-icons/fa6'
 import useSaas from './hooks/useSaas'
 import Image from 'next/image'
-const BASE_PATH = '/b2b-digital-marketing-agency';
+
 
 
 export default function Saas() {
