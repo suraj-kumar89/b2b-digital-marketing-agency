@@ -8,17 +8,19 @@ const useFounders = () => {
       'Real results. Real growth. Here’s what clients and partners say about working together.',
     testimonials: [
       {
-        message: `I have had the pleasure of watching Shitanshu grow from an intern to leading a team of paid media marketers in a remarkably short time. Throughout his tenure at Neil Patel Accel & Outplay, Shitanshu has consistently demonstrated an exceptional blend of skill, dedication, and passion for digital marketing. Any organization would be lucky to have him as he is truly a great asset to any team. His professionalism and results-driven approach guarantee success for any projects he undertakes.`,
-        authorName: 'Gautham Nagaraj',
-        authorRole: 'Head of Marketing',
-        authorAvatar: '/gautham.png',
-        companyLogo: `${BASE_PATH}/assets/images/dem.svg`,
+        message: `Working with Shitanshu and his team was a complete game-changer for our business. Before partnering with him, we were struggling to hit our targets despite investing in ads. But within just two months, not only did we surpass our lead generation goals, we also saw a significant jump in revenue.
+
+Shitanshu has a rare ability to combine data-driven strategy with a deep understanding of business growth. He doesn’t just run ads, he builds performance systems that actually move the needle. The results we got were real, measurable, and far beyond our expectations.`,
+        authorName: 'Noaman Ansari',
+        authorRole: 'CEO, Tasks Expert',
+        authorAvatar: `${BASE_PATH}/Noaman.png`,
+        companyLogo: `${BASE_PATH}/assets/images/Tasks_Expert_Logo.svg`,
       },
       {
         message: `Shitanshu is a highly skilled Performance Marketer. During our time together at Outplay, Shitanshu consistently delivered impressive results, thanks to his deep understanding of data analysis, ad creative, and audience targeting. I was particularly impressed with Shitanshu's ability to deliver on lead requirements from paid campaigns while keeping costs low. `,
         authorName: 'Sandeep John',
         authorRole: 'Marketing Director',
-        authorAvatar: '/john.png',
+        authorAvatar: `${BASE_PATH}/john.png`,
         companyLogo: `${BASE_PATH}/assets/images/logos/sprinto.svg`,
       },
     ],
