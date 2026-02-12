@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 export default function useUTM() {
   const params = useSearchParams()
 
-  const [utm, setUtm] = useState({
+  const [utm, setUtm] = useState<Record<string, string>>({
     utm_source: '',
     utm_medium: '',
     utm_campaign: '',
@@ -25,7 +25,7 @@ export default function useUTM() {
       'utm_content',
     ]
 
-    const newUtm: any = {}
+    const newUtm: Record<string, string> = {}
 
     keys.forEach((key) => {
       const value = params.get(key)
