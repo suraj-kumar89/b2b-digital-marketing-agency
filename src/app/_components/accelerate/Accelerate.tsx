@@ -8,6 +8,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import CustomDropdown from '@/_components/CustomDropdown'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import useUTM from './hooks/useUTM'
+
 
 export default function Accelerate({ slug }: { slug?: string }) {
   const {
@@ -21,6 +23,10 @@ export default function Accelerate({ slug }: { slug?: string }) {
     formFields,
     cta,
   } = useAccelerate(slug)
+
+
+const utm = useUTM()
+
 const router = useRouter()
 
   const [formData, setFormData] = useState<Record<string, string>>({});
@@ -32,16 +38,20 @@ const handleSubmit = async (e: React.FormEvent) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
   const payload = {
-    firstname: formData['Full Name'] || '',
-    email:
-      formData['Business Email'] ||
-      formData['Business email'] ||
-      formData['Email'] ||
-      '',
-    website: formData['Company Website URL'] || '',
-    services: formData['Services You’re Interested In'] || '',
-    growth_blocker: formData["What’s blocking growth right now?"] || ''
-  }
+  firstname: formData['Full Name'] || '',
+  email:
+    formData['Business Email'] ||
+    formData['Business email'] ||
+    formData['Email'] ||
+    '',
+  website: formData['Company Website URL'] || '',
+  services: formData['Services You’re Interested In'] || '',
+  growth_blocker: formData["What’s blocking growth right now?"] || '',
+
+  // ✅ ADD UTM FIELDS
+  ...utm
+}
+
 
   try {
     const res = await fetch(`${basePath}/api/submit-lead`, {
@@ -67,39 +77,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 }
 
-
-
-
-
-
-// const handleSubmit = async (e: React.FormEvent) => {
-//   e.preventDefault()
-
-//   // Map formData keys to match HubSpot field names
-// const payload = {
-//   firstname: formData['Full Name'] || '',
-//   email: formData['Business Email'] || formData['Business email'] || formData['Email'] || '',  // capture all possible labels
-//   website: formData['Company Website URL'] || '',
-//   services: formData['Services You’re Interested In'] || '',
-//   growth_blocker: formData["What’s blocking growth right now?"] || ''
-// }
-
-
-//   try {
-//     const res = await fetch('/api/submit-to-hubspot', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//       body: JSON.stringify(payload),
-//     })
-
-//     const data = await res.json()
-//     router.push('/thank-you') 
-//     console.log(data)
-//   } catch (err) {
-//     alert('❌ Submission failed. Try again.')
-//     console.error('Error submitting to HubSpot:', err)
-//   }
-// }
 
 
   return (

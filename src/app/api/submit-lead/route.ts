@@ -5,7 +5,18 @@ export async function POST(req: Request) {
   try {
     const body = await req.json()
 
-    const { firstname, email, website, services, growth_blocker } = body
+    const {
+      firstname,
+      email,
+      website,
+      services,
+      growth_blocker,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_term,
+      utm_content
+    } = body
 
     const { error } = await supabase.from('leads').insert([
       {
@@ -14,10 +25,15 @@ export async function POST(req: Request) {
         website,
         services,
         growth_blocker,
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        utm_term,
+        utm_content,
       },
     ])
 
-    // 🔴 DUPLICATE EMAIL ERROR HANDLING
+    // Duplicate email handling
     if (error) {
       if (error.code === '23505') {
         return NextResponse.json(
@@ -25,7 +41,6 @@ export async function POST(req: Request) {
           { status: 409 }
         )
       }
-
       throw error
     }
 
