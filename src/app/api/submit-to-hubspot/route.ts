@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   }
 
   const hubspotResponse = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
+    `https://api-na2.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
