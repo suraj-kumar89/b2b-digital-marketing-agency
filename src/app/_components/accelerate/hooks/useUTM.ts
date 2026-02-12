@@ -1,12 +1,17 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export default function useUTM() {
-  const params = useSearchParams()
+type UTM = {
+  utm_source: string
+  utm_medium: string
+  utm_campaign: string
+  utm_term: string
+  utm_content: string
+}
 
-  const [utm, setUtm] = useState<Record<string, string>>({
+export default function useUTM() {
+  const [utm, setUtm] = useState<UTM>({
     utm_source: '',
     utm_medium: '',
     utm_campaign: '',
@@ -15,9 +20,11 @@ export default function useUTM() {
   })
 
   useEffect(() => {
-    if (!params) return
+    if (typeof window === 'undefined') return
 
-    const keys = [
+    const params = new URLSearchParams(window.location.search)
+
+    const keys: (keyof UTM)[] = [
       'utm_source',
       'utm_medium',
       'utm_campaign',
@@ -25,7 +32,13 @@ export default function useUTM() {
       'utm_content',
     ]
 
-    const newUtm: Record<string, string> = {}
+    const newUtm: UTM = {
+      utm_source: '',
+      utm_medium: '',
+      utm_campaign: '',
+      utm_term: '',
+      utm_content: '',
+    }
 
     keys.forEach((key) => {
       const value = params.get(key)
@@ -38,7 +51,7 @@ export default function useUTM() {
     })
 
     setUtm(newUtm)
-  }, [params])
+  }, [])
 
   return utm
 }
